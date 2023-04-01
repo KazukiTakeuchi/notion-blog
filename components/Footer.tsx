@@ -1,3 +1,4 @@
+import { siteConfig } from '@/site.config';
 import Link from 'next/link';
 import React from 'react'
 
@@ -65,7 +66,7 @@ const Footer = () => {
         {/* copyright */}
         <div className="text-center p-4 ">
           <Link href="/" className="text-whitehite">
-            © sample site
+            {siteConfig.title}
           </Link>
         </div>
       </div>
