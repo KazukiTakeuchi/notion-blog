@@ -5,16 +5,15 @@ import { CardProps } from "../types/types";
 
 const Card: FC<CardProps> = ({ page }) => {
   return (
-    <Link href={`/`} className="flex justify-center">
+    <Link href={`/articles/${page.slug}`} className="flex justify-center">
       <div className="max-w-sm rounded overflow-hidden shadow-lg w-full my-4 md:my-0 content-between grid">
         {/* image */}
         <div>
           {" "}
           <Image
-            className="w-full h-auto"
+            className="w-full static w-full h-auto"
             src={page.cover}
             alt=""
-            objectFit="cover"
             width={400}
             height={225}
             quality={30}
