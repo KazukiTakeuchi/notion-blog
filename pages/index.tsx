@@ -1,3 +1,4 @@
+import { IndexProps } from "@/types/types";
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -18,7 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home: NextPage = ({ pages }) => {
+const Home: NextPage<IndexProps> = ({ pages }) => {
   console.log(pages);
   return (
     <Layout>
