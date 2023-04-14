@@ -10,7 +10,7 @@ import { fetchPages } from "../utils/notion";
 import { sampleCards } from "../utils/sample";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { results } = await fetchPages();
+  const { results } = await fetchPages({});
   return {
     props: {
       pages: results ? results : [],
@@ -20,7 +20,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home: NextPage<IndexProps> = ({ pages }) => {
-  console.log(pages);
   return (
     <Layout>
       <div className="pt-12">
