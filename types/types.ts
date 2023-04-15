@@ -16,7 +16,10 @@ export type PageProps = {
 };
 
 export type CardProps = { page: PageType };
-export type ArticleProps = CardProps;
+export type ArticleProps = {
+  page: PageType;
+  blocks: BlockType[];
+};
 export type ArticleMetaProps = CardProps;
 
 export type IndexProps = { pages: PageType[] };
@@ -55,8 +58,20 @@ export type PropertyType = {
 };
 
 export type PageType = {
+  content: ReactNode;
   id: string;
   cover: FileType | null;
   // properties: Record<string, any>;
   properties: PropertyType;
 };
+
+export type BlockType = {
+  type: string;
+  heading_1: { rich_text: RichTextType[] };
+  heading_2: { rich_text: RichTextType[] };
+  paragraph: { rich_text: RichTextType[] };
+};
+
+export type BlockProps = {
+  block: BlockType;
+}
