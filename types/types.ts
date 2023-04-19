@@ -18,7 +18,7 @@ export type PageProps = {
 export type CardProps = { page: PageType };
 export type ArticleProps = {
   page: PageType;
-  blocks: BlockType[];
+  recordMap: any;
 };
 export type ArticleMetaProps = CardProps;
 
